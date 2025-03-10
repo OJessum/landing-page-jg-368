@@ -1,0 +1,436 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: #141414;
+  color: #ceeea2;
+  font-family: Archivo Narrow, Iceberg;
+}
+
+#header {
+  z-index: 1;
+  width: 100%;
+  background-color: #424242;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ceeea2;
+  box-shadow: #141414 0px 4px 6px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+#header-img {
+  width: 120px;
+  height: 72px;
+  transform: rotateY(180deg);
+}
+
+h1 {
+  font-family: Iceberg;
+  color: #ceeea2;
+  font-size: 48px;
+  font-weight: normal;
+  align-items: center;
+}
+
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 24px 0 0;
+  top: 0;
+  right: 0;
+}
+
+.nav-link {
+  margin: 0 24px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #ceeea2;
+}
+
+a.nav-link:active {
+  color: #ceeea2;
+}
+
+a.nav-link:hover {
+  background-color: #ceeea2;
+  color: #424242;
+}
+
+a.nav-link:focus {
+  background-color: #6fe444;
+  color: #424242;
+}
+
+.container {
+  padding-top: 72px;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://i.ibb.co/Mk801Zzf/Hive-Banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+}
+
+.small-headline {
+  font-size: 36px;
+  letter-spacing: 32%;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.big-headline {
+  font-size: 84px;
+  letter-spacing: 42%;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+#form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+#email {
+  border: none;
+  border-radius: 2px;
+  width: 100%;
+  padding: 8px;
+  margin-right: 12px;
+}
+
+#submit {
+  background-color: #6fe444;
+  border: 4px outset #ceeea2;
+  border-radius: 4%;
+  font-size: 32px;
+  padding: 2px 16px;
+}
+
+h3 {
+  margin: 32px auto 0;
+  font-size: 84px;
+  letter-spacing: 42%;
+  text-align: center;
+}
+
+#evolution {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.evo-image {
+  display: flex;
+  justify-content: center;
+}
+
+.evo-card {
+  border-radius: 2px;
+  background-color: #424242;
+  margin: 12px 24px 0px;
+  padding: 24px;
+  position: relative;
+  text-align: left;
+  float: left;
+  width: 100%;
+  min-width: 250px; /* Prevent cards from becoming too narrow */
+  max-width: 440px; /* Prevent cards from becoming too wide on large screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p.evo-info {
+  width: 60%;
+  margin-top: 16px;
+}
+
+#history {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#video {
+  margin-top: 12px;
+  border: 4px inset #ceeea2;
+  border-radius: 2px;
+}
+
+#species {
+  max-width: 100%;
+  margin: 0 auto 12px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.type-card {
+  margin: 12px 24px;
+  border: 4px solid #ceeea2;
+  border-radius: 2px;
+  position: relative;
+  text-align: center;
+  float: left;
+  width: 100%;
+  min-width: 250px; /* Prevent cards from becoming too narrow */
+  max-width: 440px; /* Prevent cards from becoming too wide on large screens */
+}
+
+.type-title {
+  color: #ceeea2;
+  font-family: Iceberg;
+  font-size: 48px;
+  padding: 12px 0;
+}
+
+.type-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.type-photo {
+  border: 4px solid #ceeea2;
+  border-radius: 2px;
+}
+
+ul {
+  margin: 12px auto 12px;
+  width: 50%;
+}
+
+.card-list {
+  list-style: square;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: left;
+  padding: 4px 0;
+}
+
+.cta-button {
+  background-color: #6fe444;
+  border: 4px outset #ceeea2;
+  border-radius: 7px;
+  padding: 4px 48px;
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.cta-button:active {
+  background-color: #6fe444;
+  border: 4px outset #ceeea2;
+}
+
+.cta-button:hover {
+  background-color: #ceeea2;
+}
+
+.cta-button:focus {
+  border: 4px inset #6fe444;
+}
+
+.best-choice {
+  background-color: #ceeea2;
+  color: #141414;
+  font-size: 32px;
+}
+
+footer {
+  background-color: #424242;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 24px 0 12px 24px;
+}
+
+.icon-img {
+  margin: 0 6px;
+}
+
+.copyright-info {
+  padding: 24px 24px 12px 0;
+  text-align: right;
+}
+
+.copyright-mark {
+  margin-bottom: 8px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 900px) {
+  
+  #nav-bar {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .container {
+    padding-top: 164px;
+  }
+
+  h3 {
+    font-size: 48px;
+  }
+
+  .small-headline {
+    font-size: 24px;
+  }
+
+  .big-headline {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  
+  #header {
+    flex-direction: column;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  #nav-bar {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    padding-top: 272px;
+  }
+
+  .small-headline {
+    font-size: 16px;
+  }
+
+  .big-headline {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 36px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icons {
+    padding: 24px 0 12px 0;
+  }
+
+  .copyright-info {
+    padding: 0 0 12px 0;
+    text-align: center;
+  }
+}
